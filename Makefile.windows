@@ -1,36 +1,30 @@
-BINARY_NAME=celeritasApp
+BINARY_NAME=celeritasApp.exe
 
 build:
 	@go mod vendor
 	@echo "Building Celeritas..."
-	@go build -o tmp/$(BINARY_NAME)
+	@go build -o tmp/${BINARY_NAME} .
 	@echo "Celeritas built successfully!"
 
-run: build
+run:
 	@echo "Starting Celeritas..."
-	@./tmp/$(BINARY_NAME) &
+	@start /min cmd /c tmp\${BINARY_NAME} &
 	@echo "Celeritas started successfully!"
 
 clean:
 	@echo "Cleaning up..."
+	@DEL ${BINARY_NAME}
 	@go clean
-	@rm tmp/$(BINARY_NAME)
 	@echo "Cleaned up successfully!"
-
-start_compose:
-	docker-compose up -d
-
-stop_compose:
-	docker-compose down
 
 test:
 	@echo "Running tests..."
 	@go test ./...
 	@echo "Done!"
 
-start: start_compose run
+start: run
 
-stop: stop_compose
+stop:
 	@echo "Stopping Celeritas..."
 	@-pkill -SIGTERM -f "./tmp/$(BINARY_NAME)"
 	@echo "Celeritas stopped successfully!"
