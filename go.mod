@@ -2,8 +2,6 @@ module myapp
 
 go 1.20
 
-replace github.com/lordwestcott/celeritas => ../celeritas
-
 require (
 	github.com/CloudyKit/jet/v6 v6.2.0
 	github.com/DATA-DOG/go-sqlmock v1.5.0

@@ -16,8 +16,6 @@ var upper db2.Session
 type Models struct {
 	// any models inserted here (and in the New function)
 	// are easily accessible throughout entire application
-	Users  User
-	Tokens Token
 }
 
 func New(dbPool *sql.DB) Models {
@@ -32,10 +30,7 @@ func New(dbPool *sql.DB) Models {
 		//do nothing
 	}
 
-	return Models{
-		Users:  User{},
-		Tokens: Token{},
-	}
+	return Models{}
 }
 
 func getInsertID(i db2.ID) int {
