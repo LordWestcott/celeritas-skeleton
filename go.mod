@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/go-chi/chi/v5 v5.0.10
-	github.com/lordwestcott/celeritas v0.0.0-20230725162729-a3bcaf84dd63
 	github.com/upper/db/v4 v4.6.0
 )
 
@@ -52,6 +51,7 @@ require (
 	github.com/justinas/nosurf v1.1.1 // indirect
 	github.com/klauspost/compress v1.15.11 // indirect
 	github.com/lib/pq v1.10.4 // indirect
+	github.com/lordwestcott/celeritas v0.0.0-20230725173954-f18d9b84f567 // indirect
 	github.com/mailgun/mailgun-go/v4 v4.4.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742 // indirect
